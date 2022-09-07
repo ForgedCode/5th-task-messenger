@@ -1,0 +1,27 @@
+{
+	"name": "taskfive",
+	"version": "1.0.0",
+	"description": "5th task, internship",
+	"main": "app.js",
+	"scripts": {
+		"start": "node app.js",
+		"server": "nodemon app.js",
+		"client": "npm start --prefix client",
+		"dev": "concurrently \"npm run server\" \"npm run client\""
+	},
+	"author": "Shakirov Amirkhon",
+	"license": "ISC",
+	"devDependencies": {
+		"morgan": "^1.10.0",
+		"nodemon": "^2.0.19"
+	},
+	"dependencies": {
+		"body-parser": "^1.20.0",
+		"concurrently": "^7.3.0",
+		"cors": "^2.8.5",
+		"dotenv": "^16.0.2",
+		"express": "^4.18.1",
+		"jsonwebtoken": "^8.5.1",
+		"mongoose": "^6.5.4"
+	}
+}
