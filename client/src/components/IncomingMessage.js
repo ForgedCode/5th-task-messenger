@@ -39,14 +39,11 @@ const IncomingMessage = ({ message }) => {
 							Закрыть
 						</Button>
 					</div>
-					<div className='flex flex-col flex-wrap gap-4'>
-						<h4 className='text-lg font-semibold break-all'>
+					<div className='w-full flex flex-col flex-wrap gap-4 break-all'>
+						<h4 className='text-lg font-semibold'>
 							Отправитель: {message.sender}
 						</h4>
-
-						<h5 className='text-lg font-semibold break-all'>
-							Тема: {message.topic}
-						</h5>
+						<h5 className='text-lg font-semibold '>Тема: {message.topic}</h5>
 						<h5 className='text-sm md:text-lg'>
 							Сообщение получено{" "}
 							<Moment locale='ru' fromNow>

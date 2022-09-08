@@ -5,9 +5,11 @@ import urls from "../constants/urls";
 const apiCall = axios.create({
 	baseURL: urls.BASE_URL,
 });
-const userData = JSON.parse(localStorage.getItem(localStorageKeys.USER_DATA));
 apiCall.interceptors.request.use((req) => {
-	if (userData) {
+	if (localStorage.getItem(localStorageKeys.USER_DATA)) {
+		const userData = JSON.parse(
+			localStorage.getItem(localStorageKeys.USER_DATA)
+		);
 		req.headers.Authorization = `Bearer ${userData.token}`;
 	}
 	return req;

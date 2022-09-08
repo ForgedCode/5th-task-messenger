@@ -12,7 +12,6 @@ const EnterPage = () => {
 			const { data } = await apiCall.post("/users/auth", { username });
 			auth.login(data.user, data.token);
 			toast(data.message);
-			window.location.reload();
 		} catch (err) {
 			toast(err);
 		}
